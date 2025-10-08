@@ -287,11 +287,12 @@
 
         .desktop-nav a {
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
             font-size: 1rem;
             font-weight: 500;
             transition: color 0.3s ease;
             position: relative;
+            font-family: arial;
         }
 
         .desktop-nav a::after {
@@ -782,4 +783,5 @@
             left: 50%;
             transform: translate(-45%, -50%);
             }
+
         }
