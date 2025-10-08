@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .barrier-tape {
+  height: 40px; /* Adjust height as needed */
+  width: 100%; /* Make it full width or set a specific width */
+  background-image: repeating-linear-gradient(
+    -45deg, /* Angle of the stripes */
+    #fdd835, /* Yellow color */
+    #fdd835 20px, /* Yellow segment length */
+    #000000 20px, /* Black color */
+    #000000 40px /* Black segment length */
+  );
+  display: flex; /* To center text if present */
+  justify-content: center; /* To center text horizontally */
+  align-items: center; /* To center text vertically */
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #000000; /* Text color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.barrier-tape p {
+  margin: 0; /* Remove default paragraph margin */
+}
+    </style>
+</head>
+<body>
+
+    <div class="barrier-tape">
+</div>
+    
+</body>
+</html>
