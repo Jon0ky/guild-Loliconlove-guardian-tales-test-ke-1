@@ -610,8 +610,8 @@
                 font-size: min(12vw, 7.5rem);
             }
 
-            .container img {
-                width: 100%;
+            img {
+                width: 102%;
             }
             
             .horizontal-bar {
@@ -785,3 +785,4 @@
             }
 
         }
+
