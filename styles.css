@@ -261,7 +261,7 @@
             background: none;
             border: none;
             cursor: pointer;
-            padding: 0.5rem;
+            padding: 0.1rem;
             display: none;
             align-items: center;
             justify-content: center;
@@ -274,8 +274,8 @@
         }
 
         .hamburger-btn svg {
-            width: 28px;
-            height: 28px;
+            width: 40px;
+            height: 40px;
         }
 
         /* Desktop Navigation */
@@ -292,6 +292,7 @@
             font-weight: 500;
             transition: color 0.3s ease;
             position: relative;
+            font-family: Arial, sans-serif;
         }
 
         .desktop-nav a::after {
@@ -368,6 +369,7 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             border-left: 4px solid transparent;
+            font-family: Arial, sans-serif;
         }
 
         .nav-links a:hover {
