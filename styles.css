@@ -770,13 +770,14 @@
             position: absolute;
             top: -3px;
             left: -3px;
-            width: calc(135%  + 10px);
-            height: calc(135% + 10px);
+            width: calc(139%  + 10px);
+            height: calc(139% + 10px);
             object-fit: cover;
             pointer-events: none;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-43%, -50%);
+            transform: translate(-46%, -50%);
             }
         }
+
