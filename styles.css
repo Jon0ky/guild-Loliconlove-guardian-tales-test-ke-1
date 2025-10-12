@@ -5,7 +5,7 @@
         body {
             margin: 0;
             padding: 20px;
-            min-height: 100vh;
+            min-height: 100v    h;
             background: linear-gradient(180deg, #2a2c38, #2d3043, #3f54be);
             display: flex;
             flex-direction: column;
@@ -613,6 +613,11 @@
 
             img {
                 width: 102%;
+            }
+
+            .header-wrapper {
+            position: relative;
+            top: 20px;  /* or whatever value you need */
             }
             
             .horizontal-bar {
