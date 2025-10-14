@@ -18,6 +18,123 @@
             width: 100%;
             height: auto;
         }
+
+        .seasons-wrapper {
+            width: 85%;
+            max-width: 800px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .arrow-btn {
+            background: rgba(235, 235, 235, 0.15);
+            border: 2px solid rgba(235, 235, 235, 0.3);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        .arrow-btn:hover {
+            background: rgba(235, 235, 235, 0.25);
+            border-color: rgba(235, 235, 235, 0.5);
+            transform: scale(1.08);
+        }
+
+        .arrow-btn.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .arrow-btn.disabled:hover {
+            transform: none;
+            background: rgba(235, 235, 235, 0.15);
+        }
+
+        .seasons-scroll {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            flex: 1;
+            padding: 10px 0;
+            scrollbar-width: none;
+        }
+
+        .seasons-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .season-btn {
+            background: rgba(235, 235, 235, 0.1);
+            border: 2px solid rgba(235, 235, 235, 0.2);
+            color: white;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .season-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            border-color: rgba(235, 235, 235, 0.4);
+            background: rgba(235, 235, 235, 0.15);
+        }
+
+        .season-btn:active {
+            transform: translateY(0);
+        }
+
+        .season-btn:nth-child(1) {
+            border-color: rgba(166, 108, 253, 0.4);
+        }
+
+        .season-btn:nth-child(2) {
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+
+        .season-btn:nth-child(3) {
+            border-color: rgba(96, 165, 250, 0.4);
+        }
+
+        .season-btn:nth-child(4) {
+            border-color: rgba(52, 211, 153, 0.4);
+        }
+
+        .season-btn:nth-child(5) {
+            border-color: rgba(251, 191, 36, 0.4);
+        }
+
+        .season-btn:nth-child(6) {
+            border-color: rgba(248, 113, 113, 0.4);
+        }
+
+        .season-btn:nth-child(7) {
+            border-color: rgba(251, 146, 60, 0.4);
+        }
+
+        .season-btn:nth-child(8) {
+            border-color: rgba(236, 72, 153, 0.4);
+        }
        
         .horizontal-bar {
             width: 85%;
@@ -25,6 +142,7 @@
             height: 120px;
             display: flex;
             overflow: hidden;
+            justify-content: center;
         }
 
         .cyan-section {
@@ -109,8 +227,22 @@
             position: absolute;
             top: -3px;
             left: -3px;
-            width: calc(165% + 6px);
-            height: calc(165% + 6px);
+            width: calc(165% + 8px);
+            height: calc(165% + 8px);
+            object-fit: cover;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-45%, -50%);
+        }
+
+        .avatar-border-coop {
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: calc(166% + 10px);
+            height: calc(166% + 10px);
             object-fit: cover;
             pointer-events: none;
             position: absolute;
@@ -449,16 +581,26 @@
                 gap: 8px;
             }  
 
-            .background-text {
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -100%);
-            
-            /* Responsive font sizing using clamp for smooth scaling */
-            font-size: clamp(2rem, 8vw, 7.5rem);
-            
-            /* Additional responsive adjustments */
-            font-size: min(12vw, 7.5rem);
+            .seasons-wrapper {
+                width: 95%;
+                gap: 12px;
+            }
+
+            .arrow-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+                border-radius: 6px;
+            }
+
+            .season-btn {
+                padding: 10px 22px;
+                font-size: 14px;
+                border-radius: 6px;
+            }
+
+            .seasons-scroll {
+                gap: 12px;
             }
 
             img {
@@ -619,6 +761,29 @@
             position: relative;
             top: 20px;  /* or whatever value you need */
             }
+
+            .seasons-wrapper {
+                width: 98%;
+                gap: 10px;
+            }
+
+            .arrow-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                border-radius: 5px;
+                padding: 0;
+            }
+
+            .season-btn {
+                padding: 8px 18px;
+                font-size: 12px;
+                border-radius: 5px;
+            }
+
+            .seasons-scroll {
+                gap: 10px;
+            }
             
             .horizontal-bar {
                 width: 98%;
@@ -702,6 +867,17 @@
         }
 
         @media (max-width: 360px) {
+
+            .arrow-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 14px;
+            }
+
+            .season-btn {
+                padding: 7px 16px;
+                font-size: 11px;
+            }
 
             .horizontal-bar {
                 height: 60px;
