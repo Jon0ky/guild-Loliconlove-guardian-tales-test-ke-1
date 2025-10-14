@@ -6,10 +6,11 @@
     <title>top raid</title>
     <link rel="stylesheet" href="styles.css">
     <script src="navbar.js" defer></script>
+    <script src="season-button.js" defer></script>
 
 </head>
 <body>
-    
+
     <!-- img utama -->
 
     <div class="header-wrapper">
@@ -67,7 +68,28 @@
         </ul>
     </div>
 
+    <!-- season button -->
+    <div class="seasons-wrapper">
+        <button class="arrow-btn" id="leftArrow">❮</button>
+        
+        <div class="seasons-scroll" id="seasonsScroll">
+            <a href="season-details.html?season=1" class="season-btn">Season 1</a>
+            <a href="season-details.html?season=2" class="season-btn">Season 2</a>
+            <a href="season-details.html?season=3" class="season-btn">Season 3</a>
+            <a href="season-details.html?season=4" class="season-btn">Season 4</a>
+            <a href="season-details.html?season=5" class="season-btn">Season 5</a>
+            <a href="season-details.html?season=6" class="season-btn">Season 6</a>
+            <a href="season-details.html?season=7" class="season-btn">Season 7</a>
+            <a href="season-details.html?season=8" class="season-btn">Season 8</a>
+        </div>
 
+        <button class="arrow-btn" id="rightArrow">❯</button>
+    </div>
+</div>    
+
+    <!-- top leaderboard ini peting jangan dihapus kecuali sudah minta izin ama ketua -->
+     
+    
     <!-- Rank 1 - Top damage with special image -->
     <div class="horizontal-bar">
         <div class="cyan-section">
@@ -482,7 +504,7 @@
                 <div class="avatar-container">
                     <div class="avatar-wrapper">
                         <img src="char potrait/Gabriel_Myth.png" alt="User Avatar" class="avatar-image">
-                        <img src="border frame/frame_co_exped_0.png" alt="Avatar Border" class="avatar-border">
+                        <img src="border frame/frame_co_exped_0.png" alt="Avatar Border" class="avatar-border-coop">
                     </div>
                     <div class="user-info">
                         <div class="user-name-level">
@@ -505,6 +527,7 @@
             </div>
         </div>
     </div>
+
 
     
 
