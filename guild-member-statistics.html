@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guild Member Stats</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="navbar.js" defer></script>
+  <link rel="stylesheet" href="statistics.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <div class="logo" style="font-family: Arial, sans-serif;">LOLICONLOVE</div>
+      
+      <ul class="desktop-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="nav-menu" id="navMenu">
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="stats-wrapper">
+    <h1 class="stats-header">Guild Member Statistics</h1>
+    <div class="member-cards-grid" id="memberCardsContainer"></div>
+  </div>
+
+  <script>
+    // Sample member data with proper folder paths
+    const guildMembers = [
+      { name: "Nella", role: "guildmaster", avatar: "char potrait/Daisy_Myth.png", 
+        stats: { light: 124094, basic: 145673, dark: 100293, fire: 145653, earth: 101233, water: 90143 }},
+      { name: "Rozaliya", role: "officer", avatar: "char potrait/Andras_Housebreaker.png",
+        stats: { light: 136789, basic: 167793, dark: 96923, fire: 100392, earth: 133948, water: 113912 }},
+      { name: "Glenn", role: "member", avatar: "char potrait/Callie_Myth.png",
+        stats: { light: 134567, basic: 168765, dark: 167890, fire: 122345, earth: 129654, water: 121200 }},
+      { name: "Lemonchu", role: "member", avatar: "char potrait/Cleo_Myth.png",
+        stats: { light: 124567, basic: 168768, dark: 157890, fire: 102345, earth: 129654, water: 111200 }},
+      { name: "Liliya", role: "member", avatar: "char potrait/Daisy_Ascent.png",
+        stats: { light: 214567, basic: 178765, dark: 347890, fire: 392345, earth: 269654, water: 281200 }},
+      { name: "Member Foxtrot", role: "member", avatar: "char potrait/Dolores_Myth.png",
+        stats: { light: 244567, basic: 208765, dark: 377890, fire: 422345, earth: 299654, water: 311200 }},
+      { name: "Member Golf", role: "member", avatar: "char potrait/Drake_Myth.png",
+        stats: { light: 224567, basic: 188765, dark: 357890, fire: 402345, earth: 279654, water: 291200 }},
+      { name: "Member Hotel", role: "member", avatar: "char potrait/Eileen_Myth.png",
+        stats: { light: 264567, basic: 228765, dark: 397890, fire: 442345, earth: 319654, water: 331200 }},
+      { name: "Member India", role: "member", avatar: "char potrait/Eugene_Myth.png",
+        stats: { light: 204567, basic: 168765, dark: 337890, fire: 382345, earth: 259654, water: 271200 }},
+      { name: "Member Juliet", role: "member", avatar: "char potrait/Fabrice_Myth.png",
+        stats: { light: 274567, basic: 238765, dark: 407890, fire: 452345, earth: 329654, water: 341200 }},
+      { name: "Member Kilo", role: "member", avatar: "char potrait/Faith_Myth.png",
+        stats: { light: 234567, basic: 198765, dark: 367890, fire: 412345, earth: 289654, water: 301200 }},
+      { name: "Member Lima", role: "member", avatar: "char potrait/Faye_Myth.png",
+        stats: { light: 244567, basic: 208765, dark: 377890, fire: 422345, earth: 299654, water: 311200 }},
+      { name: "Member Mike", role: "member", avatar: "char potrait/Flint_Myth.png",
+        stats: { light: 254567, basic: 218765, dark: 387890, fire: 432345, earth: 309654, water: 321200 }},
+      { name: "Member November", role: "member", avatar: "char potrait/Gabriel_Myth.png",
+        stats: { light: 224567, basic: 188765, dark: 357890, fire: 402345, earth: 279654, water: 291200 }},
+      { name: "Member Oscar", role: "member", avatar: "char potrait/Haley_Myth.png",
+        stats: { light: 264567, basic: 228765, dark: 397890, fire: 442345, earth: 319654, water: 331200 }},
+      { name: "Member Papa", role: "member", avatar: "char potrait/Hazel_Myth.png",
+        stats: { light: 214567, basic: 178765, dark: 347890, fire: 392345, earth: 269654, water: 281200 }},
+      { name: "Member Quebec", role: "member", avatar: "char potrait/Hogan_Myth.png",
+        stats: { light: 274567, basic: 238765, dark: 407890, fire: 452345, earth: 329654, water: 341200 }},
+      { name: "Member Romeo", role: "member", avatar: "char potrait/Hunter_Myth.png",
+        stats: { light: 234567, basic: 198765, dark: 367890, fire: 412345, earth: 289654, water: 301200 }},
+      { name: "Member Sierra", role: "member", avatar: "char potrait/Iden_Myth.png",
+        stats: { light: 244567, basic: 208765, dark: 377890, fire: 422345, earth: 299654, water: 311200 }},
+      { name: "Member Tango", role: "member", avatar: "char potrait/Igor_Myth.png",
+        stats: { light: 254567, basic: 218765, dark: 387890, fire: 432345, earth: 309654, water: 321200 }},
+      { name: "Member Uniform", role: "member", avatar: "char potrait/Jade_Myth.png",
+        stats: { light: 224567, basic: 188765, dark: 357890, fire: 402345, earth: 279654, water: 291200 }},
+      { name: "Member Victor", role: "member", avatar: "char potrait/Kate_Myth.png",
+        stats: { light: 264567, basic: 228765, dark: 397890, fire: 442345, earth: 319654, water: 331200 }},
+      { name: "Member Whiskey", role: "member", avatar: "char potrait/Korin_Myth.png",
+        stats: { light: 214567, basic: 178765, dark: 347890, fire: 392345, earth: 269654, water: 281200 }},
+      { name: "Member X-ray", role: "member", avatar: "char potrait/Kruger_Myth.png",
+        stats: { light: 274567, basic: 238765, dark: 407890, fire: 452345, earth: 329654, water: 341200 }},
+      { name: "Member Yankee", role: "member", avatar: "char potrait/Laura_Myth.png",
+        stats: { light: 234567, basic: 198765, dark: 367890, fire: 412345, earth: 289654, water: 301200 }},
+      { name: "Member Zulu", role: "member", avatar: "char potrait/Leeroy_Myth.png",
+        stats: { light: 244567, basic: 208765, dark: 377890, fire: 422345, earth: 299654, water: 311200 }},
+      { name: "Member Alpha2", role: "member", avatar: "char potrait/Liza_Myth.png",
+        stats: { light: 254567, basic: 218765, dark: 387890, fire: 432345, earth: 309654, water: 321200 }},
+      { name: "Member Beta2", role: "member", avatar: "char potrait/Luke_Myth.png",
+        stats: { light: 224567, basic: 188765, dark: 357890, fire: 402345, earth: 279654, water: 291200 }},
+      { name: "Member Charlie2", role: "member", avatar: "../char potrait/Male Knight_Myth.png",
+        stats: { light: 264567, basic: 228765, dark: 397890, fire: 442345, earth: 319654, water: 331200 }},
+      { name: "Member Delta2", role: "member", avatar: "char potrait/Mariana_Myth.png",
+        stats: { light: 214567, basic: 178765, dark: 347890, fire: 392345, earth: 269654, water: 281200 }}
+    ];
+
+    // Randomly determine participation count (24-30)
+    const participationCount = Math.floor(Math.random() * 7) + 24;
+    const activeMembersCount = Math.min(participationCount, guildMembers.length);
+
+    function formatNumber(num) {
+      return num.toLocaleString();
+    }
+
+    function createMemberCard(member, index) {
+      const card = document.createElement('div');
+      card.className = 'member-profile-card';
+      card.innerHTML = `
+        <div class="card-header-section">
+          <div class="character-avatar-wrapper">
+            <div class="character-avatar" style="background-image: url('${member.avatar}')"></div>
+          </div>
+          <div class="member-info-section">
+            <div class="guild-member-name">${member.name}</div>
+            <div class="guild-member-rank ${member.role}">${member.role}</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="dmg-average-title">Rata-rata DMG Harian</div>
+
+        <div class="element-stats-grid">
+          <div class="element-stat-box">
+            <div class="element-type-label">Light</div>
+            <div class="element-damage-value">${formatNumber(member.stats.light)}</div>
+          </div>
+          <div class="element-stat-box">
+            <div class="element-type-label">Basic</div>
+            <div class="element-damage-value">${formatNumber(member.stats.basic)}</div>
+          </div>
+          <div class="element-stat-box">
+            <div class="element-type-label">Dark</div>
+            <div class="element-damage-value">${formatNumber(member.stats.dark)}</div>
+          </div>
+          <div class="element-stat-box">
+            <div class="element-type-label">Fire</div>
+            <div class="element-damage-value">${formatNumber(member.stats.fire)}</div>
+          </div>
+          <div class="element-stat-box">
+            <div class="element-type-label">Earth</div>
+            <div class="element-damage-value">${formatNumber(member.stats.earth)}</div>
+          </div>
+          <div class="element-stat-box">
+            <div class="element-type-label">Water</div>
+            <div class="element-damage-value">${formatNumber(member.stats.water)}</div>
+          </div>
+        </div>
+
+        <div class="radar-chart-wrapper">
+          <canvas id="radarChart${index}"></canvas>
+        </div>
+      `;
+      return card;
+    }
+
+    function createRadarChart(canvasId, stats) {
+      const ctx = document.getElementById(canvasId);
+      new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['Fire', 'Water', 'Earth', 'Dark', 'Basic', 'Light'],
+          datasets: [{
+            label: '',
+            data: [stats.fire, stats.water, stats.earth, stats.dark, stats.basic, stats.light],
+            backgroundColor: 'rgba(96, 165, 250, 0.2)',
+            borderColor: 'rgba(96, 165, 250, 1)',
+            pointBackgroundColor: 'rgba(96, 165, 250, 1)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgba(96, 165, 250, 1)'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              angleLines: { color: 'rgba(255, 255, 255, 0.2)' },
+              grid: { color: 'rgba(255, 255, 255, 0.1)' },
+              pointLabels: {
+                color: '#fff',
+                font: {
+                  size: 13,
+                  weight: 'bold'
+                }
+              },
+              suggestedMin: 0,
+              suggestedMax: 400000,
+              ticks: {
+                display: false
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+    }
+
+    // Render cards
+    const container = document.getElementById('memberCardsContainer');
+    for (let i = 0; i < activeMembersCount; i++) {
+      const card = createMemberCard(guildMembers[i], i);
+      container.appendChild(card);
+      
+      // Create chart after card is in DOM
+      setTimeout(() => {
+        createRadarChart(`radarChart${i}`, guildMembers[i].stats);
+      }, 0);
+    }
+
+    console.log(`Showing ${activeMembersCount} out of ${guildMembers.length} members`);
+
+  </script>
+</body>
+</html>
