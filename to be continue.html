@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Be Continued</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="navbar.js" defer></script>
+    <script src="season-button.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(180deg, #2a2c38, #2d3043, #3f54be);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .image-wrapper {
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .image-wrapper img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .text-content {
+            animation: slideUp 1s ease-out 0.5s both;
+        }
+
+        .main-text {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .sub-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            background: rgba(235, 235, 235, 0.1);
+            border: 2px solid rgba(235, 235, 235, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-out 1s both;
+        }
+
+        .info-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .info-highlight {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .main-text {
+                font-size: 2rem;
+            }
+
+            .sub-text {
+                font-size: 1.2rem;
+            }
+
+            .info-text {
+                font-size: 1rem;
+            }
+
+            .image-wrapper {
+                margin-bottom: 30px;
+            }
+
+            .info-box {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-text {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            .sub-text {
+                font-size: 1rem;
+            }
+
+            .info-text {
+                font-size: 0.9rem;
+            }
+
+            .image-wrapper {
+                margin-bottom: 25px;
+            }
+
+            .info-box {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- img utama -->
+
+    <div class="header-wrapper">
+        <picture>
+            <!-- Desktop -->
+            <source media="(min-width: 1024px)" srcset="headerimg/ada.webp">
+            <!-- Tablet -->
+            <source media="(min-width: 768px)" srcset="headerimg/hams.webp">
+            <!-- Mobile (no media query needed - it's the default) -->
+            <source srcset="headerimg/main-page-phoneB.webp">
+            <!-- Fallback -->
+            <img src="headerimg/main-page-phoneB.webp" alt="Responsive Image">
+        </picture>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+                <!-- hamburger SVG icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="logo" style="font-family: Arial, sans-serif;">LOLICONLOVE</div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="desktop-nav">
+                <li><a href="guild-member-statistics.html">Member Statistics</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="nav-menu" id="navMenu">
+        <button class="close-btn" id="closeBtn" aria-label="Close menu">
+            <!-- close SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="nav-links">
+            <li><a href="guild-member-statistics.html">Member Statistics</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- season button -->
+    <div class="seasons-wrapper">
+        <button class="arrow-btn" id="leftArrow">❮</button>
+        
+        <div class="seasons-scroll" id="seasonsScroll">
+            <a href="index.html" class="season-btn">Season 116</a>
+            <a href="to be continue.html" class="season-btn">Season 117</a>
+            <a href="to be continue.html" class="season-btn">Season 118</a>
+            <a href="to be continue.html" class="season-btn">Season 119</a>
+            <a href="to be continue.html" class="season-btn">Season 120</a>
+            <a href="to be continue.html" class="season-btn">Season 121</a>
+            <a href="to be continue.html" class="season-btn">Season 122</a>
+            <a href="to be continue.html" class="season-btn">Season 123</a>
+        </div>
+
+        <button class="arrow-btn" id="rightArrow">❯</button>
+    </div>
+</div>    
+        <div class="text-content">
+            <h1 class="main-text">TO BE CONTINUED</h1>
+            <p class="sub-text">Season selanjutnya akan datang</p>
+            
+            <div class="info-box">
+                <p class="info-text">
+                    <span class="info-highlight">Leaderboard belum tersedia</span> karena season ini belum dimulai.
+                </p>
+                <p class="info-text">
+                    Tunggu update selanjutnya untuk melihat ranking dan statistik!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
