@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top raid</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../navbar.js" defer></script>
+    <script src="../season-button.js" defer></script>
+
+</head>
+<body>
+
+    <!-- img utama -->
+
+    <div class="header-wrapper">
+        <picture>
+            <!-- Desktop -->
+            <source media="(min-width: 1024px)" srcset="../headerimg/ada.webp">
+            <!-- Tablet -->
+            <source media="(min-width: 768px)" srcset="../headerimg/hams.webp">
+            <!-- Mobile (no media query needed - it's the default) -->
+            <source srcset="../headerimg/main-page-phoneB.webp">
+            <!-- Fallback -->
+            <img src="../headerimg/main-page-phoneB.webp" alt="Responsive Image">
+        </picture>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+                <!-- hamburger SVG icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="logo" style="font-family: Arial, sans-serif;">LOLICONLOVE</div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="desktop-nav">
+                <li><a href="../guild-member-statistics.html">Member Statistics</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="nav-menu" id="navMenu">
+        <button class="close-btn" id="closeBtn" aria-label="Close menu">
+            <!-- close SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../guild-member-statistics.html">Member Statistics</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- season button -->
+    <div class="seasons-wrapper">
+        <button class="arrow-btn" id="leftArrow">❮</button>
+        
+        <div class="seasons-scroll" id="seasonsScroll">
+            <a href="../index.html" class="season-btn">Season 116</a>
+            <a href="../S 117.html" class="season-btn">Season 117</a>
+            <a href="../to be continue.html" class="season-btn">Season 118</a>
+            <a href="../to be continue.html" class="season-btn">Season 119</a>
+            <a href="../to be continue.html" class="season-btn">Season 120</a>
+            <a href="../to be continue.html" class="season-btn">Season 121</a>
+            <a href="../to be continue.html" class="season-btn">Season 122</a>
+            <a href="../to be continue.html" class="season-btn">Season 123</a>
+        </div>
+
+        <button class="arrow-btn" id="rightArrow">❯</button>
+    </div>
+</div>    
+
+    <!-- top leaderboard ini peting jangan dihapus kecuali sudah minta izin ama ketua -->
+     
+    
+    <!-- Rank 1 - Top damage with special image -->
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <img src="../top-1.png" alt="Top 1 Special Icon" class="cyan-image">
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Beth_Myth.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Glenn</p>
+                            <span class="level-badge">Lv.246</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">21</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">3,410,185,383</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 2 - Second place with special image -->
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <img src="../top-2.png" alt="Top 2 Special Icon" class="cyan-image">
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Callie_Myth.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Lemonchu</p>
+                            <span class="level-badge">Lv.243</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">21</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">3,258,071,289</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 3 - Third place with special image -->
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <img src="../top-3.png" alt="Top 3 Special Icon" class="cyan-image">
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Kanna_Super Costume.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Liliya</p>
+                            <span class="level-badge">Lv.150</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">21</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">2,986,131,093</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 4 and below - Using number instead of image -->
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">4</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Eunha_Myth.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Nella</p>
+                            <span class="level-badge">Lv.91</span>
+                        </div>
+                        <p class="main-role">Guild Master</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">21</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">2,398,090,875</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 5 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">5</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Andras_Housebreaker.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Rozaliya</p>
+                            <span class="level-badge">Lv.50</span>
+                        </div>
+                        <p class="main-role">Officer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">18</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">2,377,789,134</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 6 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">6</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Portrait_Homecoming_Queen_Mina.webp" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">inorien</p>
+                            <span class="level-badge">Lv.75</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">8</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">1,193,734,667</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 7 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">7</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Idol Captain Eva_Myth.png" alt="User Avatar" class="avatar-image">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Rubyyy</p>
+                            <span class="level-badge">Lv.92</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">12</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">1,132,877,071</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 8 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">8</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Callie.png" alt="User Avatar" class="avatar-image">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">tfdpznf</p>
+                            <span class="level-badge">Lv.85</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">16</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">762,634,096</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Rank 9 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">9</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../Kamael_Super Costume.png" alt="User Avatar" class="avatar-image">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Gorbe</p>
+                            <span class="level-badge">Lv.128</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">6</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">506,500,605</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 10 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">10</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Eunha_Myth.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">jira</p>
+                            <span class="level-badge">Lv.120</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">18</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">635,973,904</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Rank 11 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">11</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Akayuki.png" alt="User Avatar" class="avatar-image">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">snuc</p>
+                            <span class="level-badge">Lv.141</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">3</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">453,579,946</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 12 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">12</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Gabriel_Super Costume.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Rozsnbneyo</p>
+                            <span class="level-badge">Lv.97</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">21</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">431,794,021</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 13 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">13</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Daisy.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Kid</p>
+                            <span class="level-badge">Lv.80</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">10</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">398,932,864</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 14 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">14</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Gabriel_Super Costume.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Adimas</p>
+                            <span class="level-badge">Lv.80</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">9</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">368,309,765</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 15 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">15</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../Kamael_Super Costume.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">kurayami</p>
+                            <span class="level-badge">Lv.80</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">7</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">324,457,607</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 16 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">16</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../Kamael_Super Costume.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">Bihwa</p>
+                            <span class="level-badge">Lv.80</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">17</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">284,682,124</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 17 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">17</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Future Princess_Super Costume.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">aoikit</p>
+                            <span class="level-badge">Lv.80</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">12</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">118,791,090</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rank 18 --> 
+    <div class="horizontal-bar">
+        <div class="cyan-section">
+            <span class="rank-number">18</span>
+        </div>
+        <div class="gray-section">
+            <div class="left-content">
+                <div class="avatar-container">
+                    <div class="avatar-wrapper">
+                        <img src="../char potrait/Male Knight_Ascent.png" alt="User Avatar" class="avatar-image">
+                        
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name-level">
+                            <p class="user-name">arshia</p>
+                            <span class="level-badge">Lv.80</span>
+                        </div>
+                        <p class="member-role">Member</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="entry-container">
+                    <span class="entry-text entry-current">2</span>
+                    <span class="entry-text entry-total">/21</span>
+                </div>
+                <div class="damage-container">
+                    <img src="../bar_chart_4_bars_24dp_54C8E6_FILL0_wght400_GRAD0_opsz24-cutout.svg" alt="Damage Icon" class="damage-icon">
+                    <span class="damage-text">90,735,411</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+</body>
+</html>
