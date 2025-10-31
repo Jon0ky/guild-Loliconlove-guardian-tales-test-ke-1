@@ -7,6 +7,7 @@
             padding: 20px;
             min-height: 100v    h;
             background: linear-gradient(180deg, #2a2c38, #2d3043, #3f54be);
+            background-attachment: fixed; /* Keeps gradient still when scrolling */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -964,4 +965,5 @@
             transform: translate(-46%, -50%);
             }
         }
+
 
