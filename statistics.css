@@ -270,6 +270,7 @@
       padding: 20px;
       min-height: 100vh;
       background: linear-gradient(180deg, #2a2c38, #2d3043, #3f54be);
+      background-attachment: fixed; /* Keeps gradient still when scrolling */
       font-family: Arial, sans-serif;
     }
 
@@ -616,4 +617,5 @@
       .radar-chart-wrapper {
         height: 200px;
       }
+
     }
