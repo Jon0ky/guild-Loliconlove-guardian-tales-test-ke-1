@@ -1,0 +1,19 @@
+
+        .seasons-wrapper {
+            gap: 15px;
+            margin-top: 90px;
+        }
+        /* Enhanced Mobile Styles */
+        @media (max-width: 768px) {
+            .seasons-wrapper {
+                width: 95%;
+                gap: 12px;
+            }
+        }
+        @media (max-width: 480px) {
+            .seasons-wrapper {
+                width: 98%;
+                gap: 10px;
+            }
+        }
+
